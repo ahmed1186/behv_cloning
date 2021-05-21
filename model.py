@@ -9,7 +9,8 @@ import helper
 
 tf.python.control_flow_ops = tf
 
-resolver =tf.distribute.cluster_resolver.TPUClusterResolver(tpu='grpc://'+ os.environ['COLAB_TPU_ADDR'])
+resolver =tf.distribute.cluster_resolver.TPUClusterResolver()
+print('Running on TPU ', resolver.cluster_spec().as_dict()['worker'])
 tf.config.experimental_connect_to_cluster(resolver)
 tf.tpu.experimental.initialize_tpu_system(resolver)
 strategy = tf.distribute.experimental.TPUStrategy(resolver)
