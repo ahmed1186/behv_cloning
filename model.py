@@ -1,9 +1,9 @@
+import os
 import tensorflow as tf
 from keras.layers import Dense, Flatten, Lambda, Activation, MaxPooling2D
 from keras.layers.convolutional import Convolution2D
 from keras.models import Sequential
 from keras.optimizers import Adam
-import os
 
 import helper
 
