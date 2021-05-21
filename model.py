@@ -1,5 +1,4 @@
-import os
-import tensorflow as tf
+import tensorflow-gpu as tf
 from keras.layers import Dense, Flatten, Lambda, Activation, MaxPooling2D
 from keras.layers.convolutional import Convolution2D
 from keras.models import Sequential
